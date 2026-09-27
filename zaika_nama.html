@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zaika Nama | ذائقہ نامہ</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#fffaf5;color:#38251f;font-family:Arial,"Noto Nastaliq Urdu",sans-serif}
+header{background:#fff;border-bottom:1px solid #ead9cd;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:10}.brand{font-size:28px;font-weight:800;color:#8b3f25}.brand small{display:block;font-size:13px;color:#9d7868;font-weight:500}nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:#59372b;text-decoration:none;font-weight:700}
+.hero{padding:75px 7%;background:linear-gradient(120deg,#f8e7d7,#fff8ed);display:flex;align-items:center;justify-content:space-between;gap:35px}.hero h1{font-size:48px;margin:0 0 12px;color:#71351f}.hero p{font-size:19px;line-height:2;max-width:650px}.hero-art{font-size:120px;white-space:nowrap}
+.btn{display:inline-block;background:#8b3f25;color:white;text-decoration:none;padding:12px 23px;border-radius:28px;font-weight:bold;margin-top:8px}
+section{padding:52px 7%}h2{text-align:center;color:#71351f;font-size:31px;margin:0 0 8px}.lead{text-align:center;color:#806b60;margin:0 0 30px}
+.search{max-width:650px;margin:0 auto 30px;display:flex;background:#fff;border:1px solid #ead9cd;border-radius:30px;padding:5px}.search input{width:100%;border:0;outline:0;padding:12px 18px;font-size:16px;background:transparent}.search button{border:0;border-radius:25px;background:#8b3f25;color:white;padding:0 20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;border:1px solid #efdfd4;border-radius:20px;padding:24px;box-shadow:0 7px 22px #5b2d1b0d}.pic{height:125px;border-radius:15px;background:#f5e2d5;display:flex;align-items:center;justify-content:center;font-size:70px}.card h3{color:#7a3823;margin:16px 0 8px}.card p{line-height:1.8;color:#69574f}.tag{display:inline-block;background:#f7e5d8;color:#87432d;border-radius:20px;padding:5px 11px;font-size:13px}
+.hacks{background:#f8eee7}.newsletter{background:#71351f;color:white;text-align:center}.newsletter h2{color:white}.newsletter p{line-height:1.8}.email{max-width:480px;margin:18px auto;display:flex;background:white;border-radius:28px;padding:5px}.email input{flex:1;border:0;outline:0;padding:12px}.email button{border:0;background:#8b3f25;color:white;border-radius:23px;padding:0 18px}
+footer{background:#35231e;color:#eee;text-align:center;padding:28px;line-height:2}
+@media(max-width:760px){header{flex-direction:column}.hero{text-align:center;padding:50px 6%;flex-direction:column}.hero h1{font-size:37px}.hero-art{font-size:85px}.grid{grid-template-columns:1fr}nav{justify-content:center;gap:12px}}
+</style>
+</head>
+<body>
+<header>
+<div class="brand">🍲 Zaika Nama<small>ذائقہ • ترکیب • کچن ہیکس</small></div>
+<nav><a href="#home">ہوم</a><a href="#recipes">ریسپیز</a><a href="#hacks">کچن ہیکس</a><a href="#tips">ٹپس</a><a href="#blog">بلاگ</a></nav>
+</header>
+
+<main id="home">
+<section class="hero">
+<div><h1>گھر کے ذائقے، دل کے قریب ❤️</h1><p>Zaika Nama میں خوش آمدید! یہاں ملیں گی آسان پاکستانی اور دیسی ریسپیز، روزمرہ کے کچن ہیکس اور کھانا پکانے کے کام کے مشورے۔</p><a class="btn" href="#recipes">آج کی ریسپیز دیکھیں</a></div>
+<div class="hero-art">🍛🥘🍰</div>
+</section>
+
+<section id="recipes">
+<h2>آج کی پسندیدہ ریسپیز</h2><p class="lead">سادہ اجزاء، آسان طریقہ، مزیدار نتیجہ</p>
+<div class="search"><input placeholder="ریسپی تلاش کریں..." id="search"><button onclick="findRecipe()">تلاش</button></div>
+<div class="grid" id="recipeGrid">
+<article class="card recipe"><div class="pic">🍗</div><span class="tag">Dinner</span><h3>دیسی چکن کڑاہی</h3><p>گھر میں آسان طریقے سے خوشبودار اور مزیدار چکن کڑاہی بنانے کی ترکیب۔</p><a class="btn" href="#">ترکیب پڑھیں</a></article>
+<article class="card recipe"><div class="pic">🍚</div><span class="tag">Rice</span><h3>مزیدار چکن بریانی</h3><p>مصالحے دار، خوشبودار بریانی جو خاندانی دعوت کے لیے بہترین ہے۔</p><a class="btn" href="#">ترکیب پڑھیں</a></article>
+<article class="card recipe"><div class="pic">🍰</div><span class="tag">Dessert</span><h3>آسان گھر کا کیک</h3><p>نرم اور fluffy کیک کی آسان ترکیب، beginners کے لیے بھی مناسب۔</p><a class="btn" href="#">ترکیب پڑھیں</a></article>
+</div>
+</section>
+
+<section id="hacks" class="hacks">
+<h2>کچن کے آزمودہ ہیکس 💡</h2><p class="lead">روزانہ کے کام کو آسان بنانے والی چھوٹی چھوٹی باتیں</p>
+<div class="grid">
+<div class="card"><div class="pic">🧅</div><h3>پیاز کاٹنے کا آسان طریقہ</h3><p>پیاز کو کچھ دیر ٹھنڈا کرنے سے آنکھوں میں پانی آنے کی تکلیف کم ہو سکتی ہے۔</p></div>
+<div class="card"><div class="pic">🧂</div><h3>ذائقہ متوازن کریں</h3><p>نمک یا مصالحہ زیادہ ہو جائے تو ڈش کی نوعیت کے مطابق غیر نمکین اجزاء شامل کریں۔</p></div>
+<div class="card"><div class="pic">🧽</div><h3>کچن صاف رکھنے کا راز</h3><p>کھانا بناتے ہوئے استعمال شدہ برتن اور سطحیں ساتھ ساتھ صاف کرتے جائیں۔</p></div>
+</div>
+</section>
+
+<section id="tips">
+<h2>Cooking Tips 🌿</h2><p class="lead">کھانا پکانے کو مزید آسان اور منظم بنائیں</p>
+<div class="grid">
+<div class="card"><h3>🥦 سبزیاں</h3><p>مختلف رنگوں کی سبزیاں کھانے میں شامل کرنے کی کوشش کریں۔</p></div>
+<div class="card"><h3>🛒 Meal Planning</h3><p>ہفتے کی ریسپیز پہلے طے کرنے سے خریداری اور cooking آسان ہو جاتی ہے۔</p></div>
+<div class="card"><h3>🫙 Storage</h3><p>خشک اجزاء کو صاف، خشک اور مناسب بند ڈبوں میں رکھیں اور تاریخ نوٹ کریں۔</p></div>
+</div>
+</section>
+
+<section id="blog" class="hacks">
+<h2>Zaika Nama Blog 📝</h2><p class="lead">کچن، کھانے اور گھر سے جڑی دلچسپ تحریریں</p>
+<div class="grid">
+<div class="card"><span class="tag">Kitchen</span><h3>کچن کو منظم رکھنے کے 7 طریقے</h3><p>چھوٹے کچن میں جگہ کو بہتر انداز سے استعمال کرنے کے practical ideas۔</p><a class="btn" href="#">مزید پڑھیں</a></div>
+<div class="card"><span class="tag">Cooking</span><h3>ہفتے کی meal planning کیسے کریں؟</h3><p>کم وقت میں پورے ہفتے کے کھانے کی planning کا آسان طریقہ۔</p><a class="btn" href="#">مزید پڑھیں</a></div>
+<div class="card"><span class="tag">Tips</span><h3>گروسری خریدتے وقت کیا دیکھیں؟</h3><p>ضروری اشیاء کی planning اور kitchen budget کو بہتر رکھنے کے ideas۔</p><a class="btn" href="#">مزید پڑھیں</a></div>
+</div>
+</section>
+
+<section class="newsletter">
+<h2>نئی ریسپیز حاصل کریں 🌸</h2><p>اپنا email دیں اور نئی cooking ideas کی خبر پائیں۔</p>
+<div class="email"><input placeholder="آپ کا Email"><button>Subscribe</button></div>
+</section>
+</main>
+
+<footer>🍲 Zaika Nama — گھر کے ذائقے، دل کے قریب<br>© 2026 Zaika Nama</footer>
+<script>
+function findRecipe(){
+ const q=document.getElementById('search').value.toLowerCase();
+ document.querySelectorAll('.recipe').forEach(c=>c.style.display=(!q||c.innerText.toLowerCase().includes(q))?'block':'none');
+}
+</script>
+</body>
+</html>
